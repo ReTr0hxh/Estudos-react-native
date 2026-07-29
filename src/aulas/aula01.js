@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, Image} from 'react-native';
 
-function App(){
+function aula01(){
 
   return(
     <View>
