@@ -1,45 +1,25 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import React, { use, useState } from 'react';
+import { View, Text, Button, Alert} from 'react-native';
 
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
-import {
-  SafeAreaProvider,
-  useSafeAreaInsets,
-} from 'react-native-safe-area-context';
+function App(){
 
-function App() {
-  const isDarkMode = useColorScheme() === 'dark';
+  const [nome, setNome] = useState('oie');
+  const [idade, setIdade] = useState(19)
 
-  return (
-    <SafeAreaProvider>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <AppContent />
-    </SafeAreaProvider>
-  );
-}
+  function entrar(nome, idade){
+    setNome(nome)
+    setIdade(idade)
+  }
 
-function AppContent() {
-  const safeAreaInsets = useSafeAreaInsets();
 
-  return (
-    <View style={styles.container}>
-      <NewAppScreen
-        templateFileName="App.tsx"
-        safeAreaInsets={safeAreaInsets}
-      />
+  return(
+    <View style={{marginTop: 19}}>
+
+      <Button title='Mudar nome' onPress={() => entrar("opa", 22)}/>
+      <Text style={{fontSize: 20}}>{nome}</Text>
+      <Text style={{fontSize: 20}}>{idade}</Text>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
 
 export default App;
