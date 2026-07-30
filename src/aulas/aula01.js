@@ -25,4 +25,4 @@ function Logo(props){
   );
 
 }
-export default App;
+export default aula01;

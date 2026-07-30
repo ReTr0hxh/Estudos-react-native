@@ -1,25 +1,18 @@
-import React, { use, useState } from 'react';
-import { View, Text, Button, Alert} from 'react-native';
+import React from 'react';
+import { View, StyleSheet } from 'react-native';
 
-function App(){
+import MiniProjeto from './src/aulas/miniProjeto';
 
-  const [nome, setNome] = useState('oie');
-  const [idade, setIdade] = useState(19)
-
-  function entrar(nome, idade){
-    setNome(nome)
-    setIdade(idade)
-  }
-
-
-  return(
-    <View style={{marginTop: 19}}>
-
-      <Button title='Mudar nome' onPress={() => entrar("opa", 22)}/>
-      <Text style={{fontSize: 20}}>{nome}</Text>
-      <Text style={{fontSize: 20}}>{idade}</Text>
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <MiniProjeto />
     </View>
   );
 }
 
-export default App;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  }
+});

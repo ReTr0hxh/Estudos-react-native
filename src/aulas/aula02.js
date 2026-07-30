@@ -1,7 +1,7 @@
 import React, { use, useState } from 'react';
 import { View, Text, Button, Alert} from 'react-native';
 
-function aula03(){
+function Aula02(){
 
   const [nome, setNome] = useState('oie');
   const [idade, setIdade] = useState(19)
@@ -22,4 +22,4 @@ function aula03(){
   );
 }
 
-export default App;
+export default Aula02;
