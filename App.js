@@ -1,12 +1,12 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 
-import MiniProjeto from './src/aulas/miniProjeto';
+import Aula03 from './src/aulas/aula03';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <MiniProjeto />
+      <Aula03 />
     </View>
   );
 }
