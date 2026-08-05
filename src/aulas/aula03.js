@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet} from 'react-native';
 
-function Aula02(){
+function Aula03(){
 
   return(
     <View style={styles.area}>
@@ -38,4 +38,4 @@ const styles = StyleSheet.create({
 
 
 
-export default Aula02;
+export default Aula03;
