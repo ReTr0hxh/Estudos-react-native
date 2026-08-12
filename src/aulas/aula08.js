@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet} from 'react-native';
 
-export default function Aula06() {
+export default function Aula08() {
     const [nome, setNome] = useState('')
     
     function pegaNome(texto) {

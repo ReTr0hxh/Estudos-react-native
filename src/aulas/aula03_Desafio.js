@@ -1,7 +1,7 @@
 import React, { Component, useState} from 'react';
 import { View, Text, Image, Button} from 'react-native';
 
-export default function MiniProjeto() {
+export default function Aula03() {
 
     const [fome, setFome] = useState(10)
     const [felicidade, setFelicidade] = useState(0)

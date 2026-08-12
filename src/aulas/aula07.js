@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet} from 'react-native';
 
-function Aula05(){
+function Aula07(){
 
   return(
     <View style={{

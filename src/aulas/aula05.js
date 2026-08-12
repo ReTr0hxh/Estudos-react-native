@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet} from 'react-native';
 
-function Aula04(){
+function Aula05(){
 
   return(
     <View style={{flex:1, backgroundColor: '#121212'}}>

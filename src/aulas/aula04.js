@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet} from 'react-native';
 
-function Aula03(){
+function Aula04(){
 
   return(
     <View style={styles.area}>
