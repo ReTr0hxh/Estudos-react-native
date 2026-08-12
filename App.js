@@ -1,12 +1,12 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 
-import Aula10 from './src/aulas/aula10';
+import Aula11 from './src/aulas/aula11_Desafio';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Aula10 />
+      <Aula11 />
     </View>
   );
 }
