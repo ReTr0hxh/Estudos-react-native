@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet, Alert, Button} from 'react-native';
 
-export default function Aula06() {
+export default function Aula10() {
     const [nome, setNome] = useState('')
     const [input, setInput] = useState('')
     
