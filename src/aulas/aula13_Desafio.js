@@ -2,17 +2,18 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 export default function Aula13() {
+  
   const [numero, setNumero] = useState(0);
 
   function adicionar() {
-    // Só adiciona se for menor que 10
+    
     if (numero < 10) {
       setNumero(numero + 1);
     }
   }
 
   function remover() {
-    // Só remove se for maior que 0
+    
     if (numero > 0) {
       setNumero(numero - 1);
     }
@@ -32,7 +33,7 @@ export default function Aula13() {
           // Aplicamos o estilo dinâmico direto no botão
           style={[styles.botao, numero >= 10 && styles.botaoDesabilitado]}
           onPress={adicionar}
-          // A lógica do disabled fica super simples: desabilita se numero for 10
+          
           disabled={numero >= 10}
         >
           <Text style={styles.botaoTexto}>Adicionar</Text>
@@ -70,7 +71,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#000000',
     height: 50,
-    width: 50, // Aumentei um pouquinho para o número não ficar apertado
+    width: 50, 
     margin: 10,
     borderRadius: 5,
   },
@@ -82,16 +83,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#7f3b90',
-    height: 40, // Aumentei um pouco a altura para ficar mais clicável
+    height: 40, 
     margin: 17,
     borderRadius: 9,
   },
   botaoTexto: {
     fontWeight: 'bold',
-    color: '#fff', // Adicionei cor branca para ler melhor no fundo roxo
+    color: '#fff', 
   },
   botaoDesabilitado: {
-    backgroundColor: '#A9A9A9', // Agora o fundo do botão fica cinza
+    backgroundColor: '#A9A9A9', 
     opacity: 0.6,
   },
 });
