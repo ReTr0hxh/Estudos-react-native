@@ -1,8 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 
-import aula12 from './src/aulas/aula12_Desafio';
-import Aula12 from './src/aulas/aula12_Desafio';
+import Aula12 from './src/aulas/aula13_Desafio';
 
 export default function App() {
   return (
