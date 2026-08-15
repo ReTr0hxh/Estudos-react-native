@@ -24,13 +24,11 @@ export default function Aula13() {
       <Text style={styles.texto}>Pessoas no Restaurante</Text>
 
       <View style={styles.areaContador}>
-        {/* Renderizamos a variável de estado 'numero' */}
         <Text style={styles.contador}>{numero}</Text>
       </View>
 
       <View style={styles.areaBotao}>
-        <TouchableOpacity
-          // Aplicamos o estilo dinâmico direto no botão
+        <TouchableOpacity          
           style={[styles.botao, numero >= 10 && styles.botaoDesabilitado]}
           onPress={adicionar}
           
@@ -41,8 +39,7 @@ export default function Aula13() {
 
         <TouchableOpacity
           style={[styles.botao, numero <= 0 && styles.botaoDesabilitado]}
-          onPress={remover}
-          // Desabilita se numero for 0
+          onPress={remover}          
           disabled={numero <= 0}
         >
           <Text style={styles.botaoTexto}>Remover</Text>
