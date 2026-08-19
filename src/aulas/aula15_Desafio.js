@@ -3,7 +3,7 @@ import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 let tempo = null;
 let ss = 0;
-let mm = 1;
+let mm = 25;
 let numeroCiclos = 1;
 
 export default function aula15() {
