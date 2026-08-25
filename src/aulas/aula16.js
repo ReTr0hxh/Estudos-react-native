@@ -1,12 +1,12 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, FlatList } from 'react-native';
 
-import Aula16 from './src/aulas/aula16';
 
-export default function App() {
+export default function Aula14() {
   return (
     <View style={styles.container}>
-      <Aula16 />
+
+        
     </View>
   );
 }
@@ -14,5 +14,5 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  }
+  },
 });
