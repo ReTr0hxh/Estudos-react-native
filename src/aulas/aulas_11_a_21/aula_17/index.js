@@ -6,6 +6,8 @@ function Pessoas(props) {
       <View style={styles.areaPessoa}>
         <Text style={styles.textoPessoa}> {props.data.id} </Text>
         <Text style={styles.textoPessoa}> {props.data.nome} </Text>
+
+        
       </View>
     )
 }
