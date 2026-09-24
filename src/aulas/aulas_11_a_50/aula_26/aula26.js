@@ -3,7 +3,7 @@ import { View, StyleSheet, TextInput, TouchableOpacity, Text } from 'react-nativ
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-export default function Aula25() {
+export default function Aula26() {
 
   const [input, setInput] = useState(0)
   const [nome, setNome] = useState("")
