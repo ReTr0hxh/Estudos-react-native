@@ -1,11 +1,20 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
+
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 export default function App() {
 
   return (
     <View style={styles.container}>
-      <Aula />
+      <Text>Oie</Text>
+
+        <FontAwesome
+            name="home"
+            size={25}
+            color="#11118c"
+        />
+
     </View>
   );
 }
