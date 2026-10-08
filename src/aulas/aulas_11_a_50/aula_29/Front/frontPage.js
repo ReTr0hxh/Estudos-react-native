@@ -8,6 +8,11 @@ export default function FrontPage() {
     <View style={styles.container}>
       <View style={styles.topSide}>
 
+         <TouchableOpacity style={styles.botaoTopSide}>
+          <Image source={require('../img/menu.png')} style={[styles.imagem, {height: 37}]} />
+        </TouchableOpacity>    
+
+        <Image source={require('../img/foto2.png')} style={[styles.imagem, {marginLeft: 20, marginRight: 8, height: 37, marginBottom: '15'}]} />
         <Text style={styles.keep}>Keep</Text>
 
         <View style={styles.viewInput}>
@@ -20,23 +25,27 @@ export default function FrontPage() {
       <View style={styles.leftSide}>
         
         <TouchableOpacity style={styles.botaoLeftSide}>
-          <Image source={require('../img/ideia-creativa.png')} />
+          <Image source={require('../img/foto1.png')} style={styles.imagem} />
           <Text style={styles.textLeftSide}>Notas</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.botaoLeftSide}>
+          <Image source={require('../img/notificacao.png')} style={styles.imagem} />
           <Text style={styles.textLeftSide}>Lembretes</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.botaoLeftSide}>
+          <Image source={require('../img/pencil.png')} style={styles.imagem} />
           <Text style={styles.textLeftSide}>Editar marcadores</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.botaoLeftSide}>
+          <Image source={require('../img/caixadeentrada.png')} style={styles.imagem} />
           <Text style={styles.textLeftSide}>Arquivo</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.botaoLeftSide}>
+          <Image source={require('../img/lixo.png')} style={styles.imagem} />
           <Text style={styles.textLeftSide}>Lixeira</Text>
         </TouchableOpacity>
         
@@ -50,7 +59,7 @@ export default function FrontPage() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 15,
+    marginTop: 5,
   },
   topSide: {
     width: 'auto',
@@ -61,10 +70,20 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: 'row'
   },
+  botaoTopSide: {
+    backgroundColor: "#131212",
+    width: 40,
+    height: 40,
+    borderBottomRightRadius: 15,
+    borderTopRightRadius: 15,
+    alignItems: "center",
+    flexDirection: 'row',
+    paddingLeft: 15
+  },
   keep: {
     color: "#fff",
-    fontSize: 25,
-    margin: 10,
+    fontSize: 20,
+    marginRight: 20,
   },
   viewInput: {
     backgroundColor: "#1b1919",
@@ -85,11 +104,17 @@ const styles = StyleSheet.create({
   },
   botaoLeftSide: {
     backgroundColor: "#131212",
-    width: 150,
+    width: 180,
     height: 40,
-    borderBottomRightRadius: 20,
-    borderTopRightRadius: 20,
+    borderBottomRightRadius: 15,
+    borderTopRightRadius: 15,
     alignItems: "center",
-    justifyContent: "center"
+    flexDirection: 'row',
+    paddingLeft: 15
+  },
+  imagem: {
+    width: 25,
+    height: 25,
+    marginRight: 10
   }
 });
