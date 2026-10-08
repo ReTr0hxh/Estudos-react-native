@@ -19,6 +19,7 @@ export default function FrontPage() {
         
       <View style={styles.leftSide}>
         <TouchableOpacity style={styles.botaoLeftSide}>
+          <Image source={require('./img/ideia-creativa.png')}/>
           <Text style={styles.textLeftSide}>Notas</Text>
         </TouchableOpacity>
 
