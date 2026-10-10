@@ -1,7 +1,5 @@
 import react, { useState } from 'react';
 import { View, StyleSheet, Text, Image, TextInput, TouchableOpacity} from 'react-native';
-import { deleteStack } from 'react-native/types_generated/Libraries/LogBox/Data/LogBoxSymbolication';
-
 
 export default function FrontPage() {
 
@@ -54,11 +52,21 @@ export default function FrontPage() {
         
       </View>
 
-      <View style={styles.bottomSide}>
+      <View style={styles.searchContainer}>
+        <View style={styles.searchView}>
+          <TextInput placeholder='Criar uma nota...'/>
+        </View>
+      </View>
 
+      <View style={styles.bottomSide}>
+        <View style={styles.background}>
+          <Image source={require('../img/foto1.png')} style={[styles.imagem, {width: 70, height: 70}]} />
+          <Text style={{fontSize: 15}}>As notas adicionadas são exibidas aqui</Text>
+        </View>
       </View>
 
     </View>
+
   );
 }
 
@@ -122,5 +130,28 @@ const styles = StyleSheet.create({
     width: 25,
     height: 25,
     marginRight: 10
+  },
+  bottomSide: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  background: {
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  searchContainer: {
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  searchView: {
+    width: '90%',
+    height: 40,
+    borderWidth: 0.5,
+    borderRadius: 9,
+    borderColor: '#fff',
+    justifyContent: 'center',
+    paddingHorizontal: 15,
+    marginTop: 15
   }
 });
