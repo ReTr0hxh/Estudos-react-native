@@ -1,14 +1,17 @@
-import React from 'react';
+import react, { useState } from 'react';
 import { View, StyleSheet, Text, Image, TextInput, TouchableOpacity} from 'react-native';
+import { deleteStack } from 'react-native/types_generated/Libraries/LogBox/Data/LogBoxSymbolication';
 
 
 export default function FrontPage() {
+
+  const [disableText, setDisableText] = useState(true);
 
   return (
     <View style={styles.container}>
       <View style={styles.topSide}>
 
-         <TouchableOpacity style={styles.botaoTopSide}>
+        <TouchableOpacity style={styles.botaoTopSide} onPress={()=>{disableText == true ? setDisableText(false) : setDisableText(true)}}>
           <Image source={require('../img/menu.png')} style={[styles.imagem, {height: 37}]} />
         </TouchableOpacity>    
 
@@ -26,31 +29,34 @@ export default function FrontPage() {
         
         <TouchableOpacity style={styles.botaoLeftSide}>
           <Image source={require('../img/foto1.png')} style={styles.imagem} />
-          <Text style={styles.textLeftSide}>Notas</Text>
+          {disableText && <Text style={styles.textLeftSide}>Notas</Text>}
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.botaoLeftSide}>
           <Image source={require('../img/notificacao.png')} style={styles.imagem} />
-          <Text style={styles.textLeftSide}>Lembretes</Text>
+          {disableText && <Text style={styles.textLeftSide}>Lembretes</Text>}
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.botaoLeftSide}>
           <Image source={require('../img/pencil.png')} style={styles.imagem} />
-          <Text style={styles.textLeftSide}>Editar marcadores</Text>
+          {disableText && <Text style={styles.textLeftSide}>Editar marcadores</Text>}
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.botaoLeftSide}>
           <Image source={require('../img/caixadeentrada.png')} style={styles.imagem} />
-          <Text style={styles.textLeftSide}>Arquivo</Text>
+          {disableText && <Text style={styles.textLeftSide}>Arquivo</Text>}
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.botaoLeftSide}>
           <Image source={require('../img/lixo.png')} style={styles.imagem} />
-          <Text style={styles.textLeftSide}>Lixeira</Text>
+          {disableText && <Text style={styles.textLeftSide}>Lixeira</Text>}
         </TouchableOpacity>
         
       </View>
 
+      <View style={styles.bottomSide}>
+
+      </View>
 
     </View>
   );
