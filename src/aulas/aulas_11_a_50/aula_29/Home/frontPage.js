@@ -1,6 +1,8 @@
 import react, { useState } from 'react';
 import { View, StyleSheet, Text, Image, TextInput, TouchableOpacity} from 'react-native';
 
+import CreateNote from './createNote'
+
 export default function FrontPage() {
 
   const [disableText, setDisableText] = useState(true);
@@ -57,12 +59,9 @@ export default function FrontPage() {
           <TextInput placeholder='Criar uma nota...'/>
         </View>
       </View>
-
-      <View style={styles.bottomSide}>
-        <View style={styles.background}>
-          <Image source={require('../img/foto1.png')} style={[styles.imagem, {width: 70, height: 70}]} />
-          <Text style={{fontSize: 15}}>As notas adicionadas são exibidas aqui</Text>
-        </View>
+      
+      <View>
+        <CreateNote/>
       </View>
 
     </View>
@@ -130,11 +129,6 @@ const styles = StyleSheet.create({
     width: 25,
     height: 25,
     marginRight: 10
-  },
-  bottomSide: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
   },
   background: {
     alignItems: 'center',
