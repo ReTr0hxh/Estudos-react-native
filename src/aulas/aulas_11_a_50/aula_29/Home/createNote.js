@@ -19,7 +19,6 @@ export default function CreateNote() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 150,
     backgroundColor: "#131212"
   },
   background: {

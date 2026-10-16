@@ -6,6 +6,7 @@ import CreateNote from './createNote'
 export default function FrontPage() {
 
   const [disableText, setDisableText] = useState(true);
+  const [page, setPage] = useState(true);
 
   return (
     <View style={styles.container}>
@@ -60,8 +61,8 @@ export default function FrontPage() {
         </View>
       </View>
       
-      <View>
-        <CreateNote/>
+      <View style={{ flex: 1 }}>
+        <CreateNote />
       </View>
 
     </View>
