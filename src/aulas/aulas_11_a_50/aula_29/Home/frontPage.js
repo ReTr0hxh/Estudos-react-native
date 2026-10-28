@@ -1,18 +1,21 @@
-import react, { useState } from 'react';
+import React, { useState } from 'react';
 import { View, StyleSheet, Text, Image, TextInput, TouchableOpacity} from 'react-native';
 
 import CreateNote from './createNote'
+
+const width = size
 
 export default function FrontPage() {
 
   const [disableText, setDisableText] = useState(true);
   const [page, setPage] = useState(true);
+  const [size, setSize] = useState(180);
 
   return (
     <View style={styles.container}>
       <View style={styles.topSide}>
 
-        <TouchableOpacity style={styles.botaoTopSide} onPress={()=>{disableText == true ? setDisableText(false) : setDisableText(true)}}>
+        <TouchableOpacity style={styles.botaoTopSide} onPress={()=>{disableText == true ? setDisableText(false) : setDisableText(true), setSize(50)}}>
           <Image source={require('../img/menu.png')} style={[styles.imagem, {height: 37}]} />
         </TouchableOpacity>    
 
@@ -61,7 +64,7 @@ export default function FrontPage() {
         </View>
       </View>
       
-      <View style={{ flex: 1 }}>
+      <View style={{flex: 1}}>
         <CreateNote />
       </View>
 
@@ -117,7 +120,17 @@ const styles = StyleSheet.create({
     
   },
   botaoLeftSide: {
-    backgroundColor: "#131212",
+    backgroundColor: "#9b2929",
+    width: width,
+    height: 40,
+    borderBottomRightRadius: 15,
+    borderTopRightRadius: 15,
+    alignItems: "center",
+    flexDirection: 'row',
+    paddingLeft: 15
+  },
+  botaoLeftSideSelect: {
+    backgroundColor: "#df9b4d",
     width: 180,
     height: 40,
     borderBottomRightRadius: 15,
